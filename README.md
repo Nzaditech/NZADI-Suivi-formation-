@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NzadiTech Formation Manager — V1 MVP
 
 Application web interne de gestion de centre de formation, inspirée du cahier des charges V2.0. Interface en français, responsive, backend Node.js/Express, PostgreSQL, authentification par jeton et contrôle des accès par rôle.
@@ -74,3 +75,7 @@ Le compte connecté peut changer son mot de passe depuis l'icône de clé en bas
 ## Déploiement Render gratuit
 
 Le fichier `render.yaml` sélectionne le plan gratuit pour le service Web et PostgreSQL. Attention : le Web Service gratuit peut se mettre en veille, et la base PostgreSQL gratuite Render est temporaire (expiration au bout de 30 jours). Cette configuration est destinée à la démonstration et aux tests, pas à la conservation durable des données ni à la production. Consulte `docs/DEPLOIEMENT-RENDER.md` avant de déployer.
+=======
+# NZADI-Suivi-formation-
+Gestionnaire de centre de formation 
+>>>>>>> ba10971431b5b83e25eaf046f6179936ce256950
