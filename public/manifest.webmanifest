@@ -1,0 +1,11 @@
+{
+  "name": "NzadiTech Formation Manager",
+  "short_name": "Nzadi FM",
+  "description": "Gestion administrative des centres de formation",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1727",
+  "theme_color": "#142846",
+  "icons": []
+}
