@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: nzaditech-formation-manager
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: nzaditech-formation-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SEED_ADMIN_NAME
+        value: Administrateur NzadiTech
+      - key: SEED_ADMIN_EMAIL
+        value: admin@nzaditech.com
+      - key: SEED_ADMIN_PASSWORD
+        generateValue: true
+      - key: SEED_CENTER_NAME
+        value: Centre pilote NzadiTech
+databases:
+  - name: nzaditech-formation-db
+    plan: free
+    databaseName: nzadi_formation
+    user: nzadi_admin

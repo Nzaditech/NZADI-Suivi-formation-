@@ -1,0 +1,4 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
+test('les fichiers essentiels du projet existent',()=>{for(const f of ['package.json','src/server.js','src/db.js','public/index.html','public/app.js','public/styles.css','render.yaml','README.md'])assert.ok(fs.existsSync(path.join(__dirname,'..',f)),`${f} manquant`)});
+test('la configuration Render déclare un service et une base',()=>{const s=fs.readFileSync(path.join(__dirname,'..','render.yaml'),'utf8');assert.match(s,/type: web/);assert.match(s,/type: pserv|databases:/);assert.match(s,/DATABASE_URL/)});
+test('le backend expose des contrôles de santé et authentification',()=>{const s=fs.readFileSync(path.join(__dirname,'..','src/server.js'),'utf8');assert.match(s,/\/api\/health/);assert.match(s,/\/api\/auth\/login/);assert.match(s,/function auth/)});
